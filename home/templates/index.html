@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block 'title' %} Home {% endblock %}
+
+{% block 'container' %}
+<h1>Home</h1>
+<ul>
+    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+    <li><a href="{% url 'account_login' %}">Sign In</a></li>
+    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+    <li><a href="{% url 'account_reset_password' %}">Forgot Password</a></li>
+    <br>
+    <h3>Logado</h3>
+    <li><a href="{% url 'account_change_password' %}">Change Password</a></li>
+    <li><a href="{% url 'account_email' %}">Change Email</a></li>
+</ul>
+{% endblock %}
