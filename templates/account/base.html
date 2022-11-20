@@ -15,13 +15,11 @@
     {% include 'layout/header-account.html' %}
     
     {% if messages %}
-    <div class="alert alert-success">
-      <ul>
-        {% for message in messages %}
-        <li>{{message}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+      {% for message in messages %}
+        <section class="alert {{message.tags}}">
+            {{message}}
+        </section>
+      {% endfor %}
     {% endif %}
 
     {% block content %}
